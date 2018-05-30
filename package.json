@@ -1,28 +1,19 @@
 {
-  "name": "kiribi_ususama",
+  "name": "hayaakitsu",
   "version": "2.7.7",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "proinit:mkdir": "mkdirp dist sg/dist src/scss/assets src/scss/assets/bootstrap src/scss/assets/bootstrap/honoka src/scss/assets/bootstrap/honoka/bootstrap src/scss/assets/bootstrap/honoka/bootstrap/mixins",
-    "proinit:honoka1": "copyfiles -f \"./node_modules/bootstrap-honoka/scss/*.scss\" \"./src/scss/assets/bootstrap\"",
-    "proinit:honoka2": "copyfiles -f \"./node_modules/bootstrap-honoka/scss/honoka/*.scss\" \"./src/scss/assets/bootstrap/honoka\"",
-    "proinit:honoka3": "rename-files bootstrap.scss _bootstrap.scss --PATH=./src/scss/assets/bootstrap/",
-    "proinit:bootstrap1": "copyfiles -f \"./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/*.scss\" \"./src/scss/assets/bootstrap/honoka/bootstrap\"",
-    "proinit:bootstrap2": "copyfiles -f \"./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/*.scss\" \"./src/scss/assets/bootstrap/honoka/bootstrap/mixins\"",
-    "proinit": "npm-run-all -s proinit:mkdir proinit:honoka1 proinit:honoka2 proinit:honoka3 proinit:bootstrap1 proinit:bootstrap2",
-    "gueshingon": "npm run proinit:mkdir",
-    "om": "npm run proinit:honoka1",
-    "krodhana": "npm run proinit:honoka2",
-    "hum": "npm run proinit:honoka3",
-    "jah": "npm run proinit:bootstrap1",
-    "svaha": "npm run proinit:bootstrap2",
-    "gue": "npm-run-all -s gueshingon om krodhana hum jah svaha"
+  "proinit:mkdir": "mkdirp dist sg/dist",
+  "proinit:scssize": "rename-files normalize.css _normalize.scss --PATH=./node_modules/normalize.css/",
+  "proinit": "npm-run-all -s proinit:mkdir proinit:scssize",
+  "ooharae": "npm run proinit:mkdir",
+  "kotoba": "npm run proinit:scssize",
+  "harae": "npm-run-all -s ooharae kotoba"
   },
   "author": "Arm Band",
   "license": "ISC",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.24.4",
     "copyfiles": "^2.0.0",
     "gulp": "^3.9.1",
@@ -36,7 +27,6 @@
     "gulp-sass": "^4.0.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-uglify": "^3.0.0",
-    "bootstrap-honoka": "3.3.7-a",
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "mkdirp": "^0.5.1",
@@ -45,6 +35,7 @@
     "gulp-frontnote": "^2.0.1",
     "gulp-data": "^1.3.1",
     "gulp-json-to-sass": "^0.0.4",
-    "brand-colors": "^2.0.1"
+    "brand-colors": "^2.0.1",
+    "normalize.css": "^8.0.0"
   }
 }

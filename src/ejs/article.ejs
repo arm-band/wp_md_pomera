@@ -21,41 +21,33 @@ var returnNews = name + pages + ".html";
     <!-- main -->
     <main class="main <%= id %>" id="<%= id %>Main">
 <%- include("partial/_breadcrumb_article", { variables, id, returnNews, newsBlock }) %>
-        <section class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
+        <section class="article_container">
 <%
 var datetime = newsBlock.time.replace(/\//g, "-");
 var idTime = newsBlock.time.replace(/\//g, "");
 var version = newsBlock.title.replace(/\./g, "_");
 %>
-                    <article class="news_article" id="<%= newsBlock.id %>_<%= version %>-<%= idTime %>">
-                        <div class="panel panel-default">
-                        	<div class="panel-heading">
-                        		<h2 class="news_header"><%= newsBlock.title %></h2>
-                        	</div>
-                        	<div class="panel-body">
+            <article class="news_article" id="<%= newsBlock.id %>_<%= version %>-<%= idTime %>">
+        		<h2 class="news_header"><%= newsBlock.title %></h2>
+            	<div class="news_body">
 <%
 if(newsBlock.thumbnail.length > 0) {
 %>
-                                <div class="news_thumbnail">
-                        	        <img src="img/<%- newsBlock.thumbnail %>" class="img-responsive">
-                                </div>
+                    <div class="news_thumbnail">
+                        <img src="img/<%- newsBlock.thumbnail %>" class="img-responsive">
+                    </div>
 <%
 }
 %>
-                                <div class="news_contents">
-                        	        <%- newsBlock.content %>
-                                </div>
-                        	</div>
-                        	<div class="panel-footer">
-                        		<time class="news_createtime" datetime="<%= datetime %>"><%= newsBlock.time %></time>
-                        	</div>
-                        </div>
-                    </article>
-<p><a href="news/<%= returnNews %>" class="btn">記事一覧に戻る</a></p>
+                    <div class="news_contents">
+                        <%- newsBlock.content %>
+                    </div>
                 </div>
-            </div>
+                <div class="news_footer">
+    	            <time class="news_createtime" datetime="<%= datetime %>"><%= newsBlock.time %></time>
+            	</div>
+            </article>
+            <p><a href="news/<%= returnNews %>" class="btn">記事一覧に戻る</a></p>
         </section>
     </main>
     <!-- /main -->

@@ -10,21 +10,6 @@
     transition: all 0.3s ease;
 }
 
-//dropShadow(垂直)
-@mixin dropShadowVertical() {
-    box-shadow: 0px 3px 3px rgba($color, 0.4);
-}
-
-//dropShadow(斜め)
-@mixin dropShadowSkew() {
-    box-shadow: 3px 3px 3px rgba($color, 0.4);
-}
-
-//dropShadow(斜め、内側)
-@mixin dropShadowSkewInset() {
-    box-shadow: 3px 3px 3px rgba($color, 0.4) inset;
-}
-
 //キービジュアルの背景画像
 @mixin eyecatchBGImg($imgPath) {
     &:not(.mobile_Safari) {
@@ -63,6 +48,6 @@
     z-index: 3;
     font: {
         size: $fontSize;
-        family: "Dancing Script", cursive; /* googleフォント */
+        family: "Great Vibes", cursive; /* googleフォント */
     }
 }

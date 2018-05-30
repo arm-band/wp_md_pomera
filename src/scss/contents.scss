@@ -26,10 +26,4 @@
 //  news                                          *
 //                                                *
 // ============================================= */
-.news {
-    &_contents {
-        ul {
-            padding-left: 1rem;
-        }
-    }
-}
+@import "demo";

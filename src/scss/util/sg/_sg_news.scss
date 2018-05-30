@@ -9,7 +9,7 @@
 コンテンツページのアイキャッチ(ヒーロー)
 ```
     <section class="eyecatch">
-        <div class="container-fluid">
+        <div class="eyecatch_container">
             <h2 class="eyecatch_header">Page Name</h2>
         </div>
     </section>
@@ -19,21 +19,17 @@
 #styleguide
 記事
 ```
-                    <article class="news_article" id="releasenote-hoge">
-                        <div class="panel panel-default">
-                        	<div class="panel-heading">
-                        		<h3 class="news_header">ほげ</h3>
-                        	</div>
-                        	<div class="panel-body">
-                                <div class="news_contents">
-                        	        <p>ふが。</p><ul><li>ほげほげ</li><li>ぴよぴよ</li></ul>
-                                </div>
-                        	</div>
-                        	<div class="panel-footer">
-                        		<time class="news_createtime" datetime="99999999">9999/99/99</time>
-                        	</div>
+                <article class="news_article" id="releasenote-hoge">
+            		<a href="news/articles/releasenote-hoge.html"><h3 class="news_header">ほげ</h3></a>
+                	<div class="news_body">
+                        <div class="news_contents">
+                	        <p>ふが。</p><ul><li>ほげほげ</li><li>ぴよぴよ</li></ul>
                         </div>
-                    </article>
+                	</div>
+                	<div class="news_footer">
+                		time class="news_createtime" datetime="99999999">9999/99/99</time>
+                	</div>
+                </article>
 ```
 */
 /*

@@ -5,12 +5,11 @@
 // Import                                        *
 //                                               *
 // ============================================= */
-@import "assets/bootstrap/bootstrap"; //bootstrap(3.3.7)
+@import "../../node_modules/normalize.css/normalize"; //reset css
 @import "util/var"; //変数
 @import "../../node_modules/brand-colors/dist/latest/scss/brand-colors.latest"; //ソーシャルメディアなどのブランドカラー
 @import "util/typo"; //ベンダープレフィックス等のMixinモジュール
 @import "util/module"; //ベンダープレフィックス等のMixinモジュール
-@import "util/bootcanceller"; //bootstrapでいつも気になるものをキャンセル
 @import "util/base"; //フォント指定やIE対処など
 
 // ============================================= *
@@ -18,20 +17,12 @@
 // 全体                                           *
 //                                               *
 // ============================================= */
-//ボタンの影とクリック時に影消える
-.btn {
-    @include dropShadowSkew();
-    &.active {
-        @include dropShadowSkewInset();
-    }
-}
 
 // ============================================= *
 //                                               *
 // ヘッダ                                         *
 //                                               *
 // ============================================= */
-@import "util/navbar"; //ヘッダナビゲーションバーの設定。ハンバーガーメニューのアニメーションもここで。
 @import "partial/header";
 
 // ============================================= *
