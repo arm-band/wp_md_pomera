@@ -1,6 +1,6 @@
 {
     "commons": {
-        "sitename": "Hayaakitsu",
+        "sitename": "Benten",
         "year": "2018",
         "author": "アルム＝バンド",
         "baseurl": "/",
@@ -14,32 +14,7 @@
             "entitle": "Home",
             "css": "index",
             "js": "app.min",
-            "description": "gulpとEJSに対応したMinimal Template",
-            "ogpimage": "eyecatch.jpg",
-            "newscount": 5
-        },
-        "about": {
-            "title": "概要",
-            "entitle": "About Page",
-            "css": "contents",
-            "js": "app.min",
-            "description": "このページについての説明です。",
-            "ogpimage": "eyecatch.jpg"
-        },
-        "news": {
-            "title": "更新履歴",
-            "entitle": "News",
-            "css": "contents",
-            "js": "app.min",
-            "description": "更新履歴の一覧です。",
-            "ogpimage": "eyecatch.jpg"
-        },
-        "article": {
-            "title": "記事",
-            "entitle": "News",
-            "css": "contents",
-            "js": "app.min",
-            "description": "記事です。",
+            "description": "gulpとEJSに対応したスライド用テンプレート",
             "ogpimage": "eyecatch.jpg"
         }
     }

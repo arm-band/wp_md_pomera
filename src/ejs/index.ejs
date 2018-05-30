@@ -5,69 +5,40 @@ id = filename.slice(filename.lastIndexOf("\\") + 1).replace(/\.ejs/g, ''); //PC�
 var newsjson = newsjson;
 var commonVar = commonVar;
 var navbarHeight = commonVar["navbar-height"].replace(/\px/g, ''); //commonVarの中のナビゲーションバーの高さの値からpxを取り除き、数字だけにする(bodyタグのdata-offsetに使用)
-%><%- include("util/_year", { variables, id }) %><%- include("util/_headset", { variables, id }) %>
+%><%- include("util/_headset", { variables, id }) %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <%- include("partial/_head", { variables, id, commonVar, metaTitle, metaDescription, metaOgpimage }) %>
 </head>
-<body data-spy="scroll" class="<%= id %>Page" id="<%= id %>Page">
+<body>
 
-<%- include("index/_loading") %>
-
-<div id="wrapper">
-<%- include("partial/_header", { variables, id, commonVar }) %>
-
-<%- include("index/_eyecatch", { variables, id }) %>
-
-    <!-- main -->
-    <main class="main <%= id %>">
-        <ol class="breadcrumb">
-            <li class="active"><a href="./"><i class="fa fa-fw fa-home" aria-hidden="true"></i>ホーム</a></li>
-        </ol>
-        <section class="news_container" id="news">
-            <h2>What's new? <small>news</small></h2>
-            <p>新着情報一覧(最新<%=  variables.param[id].newscount %>件)です。過去の履歴は下記リンクより。</p>
-            <p><a href="news/news1.html">過去の履歴</a></p>
-            <ul class="news_list">
-<% for(var i in newsjson.news) {
-    if(i <  variables.param[id].newscount) {
-        var datetime = newsjson.news[i].time.replace(/\//g, "-");
-        var idTime = newsjson.news[i].time.replace(/\//g, "");
-        var version = newsjson.news[i].title.replace(/\./g, "_");
-%>
-                <li class="news_listItem">
-                    <a href="news/articles/<%= newsjson.news[i].id %>_<%= version %>-<%= idTime %>.html">
-                        <h3 class="news_header"><%= newsjson.news[i].title %></h3>
-                        <time class="news_createtime" datetime="<%= datetime %>"><%= newsjson.news[i].time %></time>
-                        <p><%- newsjson.news[i].excerpt %></p>
-                    </a>
-                </li>
-<%
-    }
-}
-%>
-            </ul>
-        </section>
-        <section class="about_container" id="about">
-            <h2>What's this page? <small>About page</small></h2>
-            <p>自分用の小規模Webサイト制作用テンプレートです。<a href="https://github.com/arm-band/kiribi_ususama">Kiribi_Ususama</a>からフォークしたBootstrap不使用版という位置付けになります。</p>
-            <p>Scss, ejs, gulp使用。</p>
-            <p><a href="about.html">詳しい概要</a></p>
-            <h3>名前の由来</h3>
-            <p>gulpを使っている方はgulpが飲み込む、ごくごくと飲むという意味(だからシェイクのロゴなのですね)なので、大祓詞で穢れを飲み込む<ruby>
-                速開津比売<rp>(</rp><rt>はやあきつひめ</rt><rp>)</rp>
-            </ruby>神からお名前をお借りしました。</p>
-        </section>
-    </main>
-    <!-- /main -->
-
-<%- include("partial/_footer", { variables, id, copyRightYear }) %>
-
+<div class="reveal">
+	<div class="slides">
+		<section data-markdown="./content/slide.md" data-separator="^\r\n---\r\n$" data-separator-vertical="^\r\n>>>\r\n$">
+		</section>
+	</div>
 </div>
 
-<script src="js/lib.min.js"></script>
-<script src="js/progress.min.js"></script>
-<script src="js/<%= variables.param[id].js %>.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+	transition: 'slide', // none/fade/slide/convex/concave/zoom
+	// Optional reveal.js plugins
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true },
+		{ src: 'plugin/notes/notes.js', async: true }
+	]
+});
+</script>
 </body>
 </html>

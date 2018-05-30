@@ -5,25 +5,12 @@
 // Import                                        *
 //                                               *
 // ============================================= */
-@import "../../node_modules/normalize.css/normalize"; //reset css
+@import "../../node_modules/font-awesome/scss/font-awesome"; //font-awesome 4.7.0
 @import "util/var"; //変数
 @import "../../node_modules/brand-colors/dist/latest/scss/brand-colors.latest"; //ソーシャルメディアなどのブランドカラー
 @import "util/typo"; //ベンダープレフィックス等のMixinモジュール
 @import "util/module"; //ベンダープレフィックス等のMixinモジュール
 @import "util/base"; //フォント指定やIE対処など
-
-// ============================================= *
-//                                               *
-// 全体                                           *
-//                                               *
-// ============================================= */
-
-// ============================================= *
-//                                               *
-// ヘッダ                                         *
-//                                               *
-// ============================================= */
-@import "partial/header";
 
 // ============================================= *
 //                                               *
@@ -34,13 +21,3 @@
 	background-color: $bg-color;
 	color: $color;
 }
-
-// ============================================= *
-//                                               *
-// フッタ                                         *
-//                                               *
-// ============================================= */
-@import "partial/footer";
-
-// ***** ページトップへ戻る ***** */
-@import "partial/returnpagetop";

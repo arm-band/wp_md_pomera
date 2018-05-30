@@ -9,23 +9,61 @@
 
 // ============================================= *
 //                                               *
-//  スタイルガイド                                 *
+// メインコンテンツ                                 *
 //                                               *
 // ============================================= */
-@import "util/sg/sg_index";
-
-// ============================================= *
-//                                               *
-//  ローディング                                   *
-//                                               *
-// ============================================= */
-@import "index/loading";
-
-// ============================================== *
-//                                                *
-//  アイキャッチ                                    *
-//                                                *
-// ============================================= */
-@import "index/eyecatch";
-
-@import "demo";
+//スライド中
+.reveal {
+    font-size: 30px;
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: none;
+    }
+    h1 {
+        font-size: 5.5rem;
+    }
+    h3 {
+        margin-top: 1rem;
+    }
+    pre, code {
+        background-color: $main-color2;
+    }
+    img {
+        max: {
+            width: 90%;
+            height: 90%;
+        }
+    }
+    //画像の調整
+    #eyecatch {
+    width: 50rem;
+    height: auto;
+    }
+    .profile_icon, .portforio {
+        float: left;
+    }
+    .profile_icon {
+        width: 15rem;
+    }
+    .portforio {
+        width: 20rem;
+    }
+    //font awesome
+    .fa-fw {
+        color: $main-color;
+    }
+    //fa-ulはlist-style無効
+    .no_ls {
+        list-style: none outside;
+    }
+    //デフォがinline-blockなのでblock要素にする
+    .block {
+        display: block;
+    }
+    //insideにする
+    .inside {
+        list-style: disc inside;
+    }
+    ul {
+        margin: 0;
+    }
+}
