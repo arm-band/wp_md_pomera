@@ -20,7 +20,7 @@
 
 ---
 
-<img src="./img/portfolio_img.jpg" alt="縦画像" class="portforio">
+<img src="./img/portforio_img.jpg" alt="縦画像" class="portforio">
 
 #### <i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>サンプル
 
