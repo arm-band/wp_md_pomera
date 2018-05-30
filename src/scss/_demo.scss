@@ -128,7 +128,7 @@
 // 新着情報                                       *
 //                                               *
 // ============================================= */
-.newsPage
+.newsPage {
     .news {
         &_article {
             padding: {
@@ -170,6 +170,15 @@
                 border: 1px solid $link-color;
                 border-radius: 2px;
                 margin: 0;
+            }
+        }
+    }
+}
+.articlePage {
+    .news {
+        &_contents {
+            ul {
+                padding-left: 1rem;
             }
         }
     }
