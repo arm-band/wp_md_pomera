@@ -1,13 +1,12 @@
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="format-detection" content="telephone=no,address=no,email=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<base href="<%= variables.commons.baseurl %>">
-	<title><%= metaTitle %> | <%= variables.commons.sitename %></title>
-	<meta name="description" content="<%= metaDescription %>">
+    <title><%= metaTitle %> | <%= variables.commons.sitename %></title>
+    <meta name="description" content="<%= metaDescription %>">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
@@ -16,18 +15,20 @@
     <!-- theme color -->
     <meta name="theme-color" content="<%= commonVar["main-color"] %>">
 
-	<!-- css -->
-	<link rel="stylesheet" href="css/reveal.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/beige.css" id="theme">
     <link rel="stylesheet" href="lib/css/zenburn.css">
-	<link href="css/<%= variables.param[id].css %>.css" rel="stylesheet">
-
+    <link href="css/<%= variables.param[id].css %>.css" rel="stylesheet">
+<% if(variables.commons.mode == "print") { %>
+    <link rel="stylesheet" href="css/print/pdf.css">
+<% } %>
     <!-- twitter card -->
-	<meta name="twitter:card" content="photo" />
-	<meta name="twitter:site" content="@<%= variables.commons.twitteraccount %>" />
-	<meta property="og:type" content="website" />
-	<meta name="og:title" content="<%= metaTitle %>" />
-	<meta name="og:site_name" content="<%= variables.commons.sitename %>" />
-	<meta name="og:description" content="<%= metaDescription %>" />
-	<meta name="og:image" content="<%= metaOgpimage %>" />
-	<meta name="og:url" content="<%= variables.commons.ogpurl %>" />
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@<%= variables.commons.twitteraccount %>" />
+    <meta property="og:type" content="website" />
+    <meta name="og:title" content="<%= metaTitle %>" />
+    <meta name="og:site_name" content="<%= variables.commons.sitename %>" />
+    <meta name="og:description" content="<%= metaDescription %>" />
+    <meta name="og:image" content="<%= metaOgpimage %>" />
+    <meta name="og:url" content="<%= variables.commons.ogpurl %>" />

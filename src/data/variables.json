@@ -3,7 +3,7 @@
         "sitename": "Benten",
         "year": "2018",
         "author": "アルム＝バンド",
-        "baseurl": "/",
+        "mode": "slide",
         "ogpurl": "https://github.com/arm-band/kiribi_ususama/",
         "ogpimage": "blob/master/misc/img/kiribi_ususama.png",
         "twitteraccount": "Bredtn_1et"

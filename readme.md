@@ -81,7 +81,9 @@ ejsの使い方をもっとしっかりしていきたい。
             - `sitename`: サイト名。タイトルタグやトップページのアイキャッチ、ヘッダのブランド、フッタのコピーライトなど各所に使われます
             - `year`: 年数。フッタのコピーライトで使います
             - `author`: 作者名。フッタのコピーライトで使います
-            - `baseurl`: `base`タグの`href`属性に使います
+            - `mode`: スライドとして使用するか、pdfとして印刷するかのモード切替です(下記2択)
+                - `slide`: `print/pdf.css`を読み込まず、スライドとして使用します
+                - `print`: `print/pdf.css`を読み込み、pdf印刷用とします
             - `ogpurl`: Twitterカード出力時のサイトURLを指定します
             - `ogpimage`: Twitterカード出力時の画像を指定します
             - `twitteraccount`: Twitterカード出力時のTwitterアカウントを指定します(@マーク抜き)
@@ -95,7 +97,6 @@ ejsの使い方をもっとしっかりしていきたい。
                 - `js`: 読み込むjsファイルのファイル名。拡張子不要
                 - `description`: `<meta description="">`に記述される説明
                 - `ogpimage`: Twitterカード出力時の画像を指定します
-                - `newscount`: `index.ejs`のみ存在。新着情報一覧で出力する新着情報の件数
     - `commonvar.json`
         - 色、ナビゲーションバーの高さなど、基本的な情報をjson形式で記述
         - このjsonからscssの各所で使用している変数の元となる`/src/base/_var.scss`が生成される
@@ -104,5 +105,8 @@ ejsの使い方をもっとしっかりしていきたい。
 
 ## Release Notes
 
+- 2018/7/29 ver.3.0.0
+    - 印刷モードを追加。`variable.json`の値で印刷用cssを読み込むか否か切り替えできるようにしました
+        - 印刷時はURLの後ろ(`/#/`より前)に`?print-pdf`を付けてください。
 - 2018/5/30 ver.2.7.7
     - 初版。バージョン番号はKiribi_Ususamaのものを保持し、同じ番号を付けるものとする。
