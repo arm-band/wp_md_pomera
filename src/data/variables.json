@@ -1,6 +1,6 @@
 {
     "commons": {
-        "sitename": "Benten",
+        "sitename": "WordPress + Markdown + ポメラ で古のサイト復活",
         "year": "2018",
         "author": "アルム＝バンド",
         "mode": "slide",
@@ -14,7 +14,7 @@
             "entitle": "Home",
             "css": "index",
             "js": "app.min",
-            "description": "gulpとEJSに対応したスライド用テンプレート",
+            "description": "WordPressにポメラで書いたMarkdownの記事を流し込むことで古のサイトを復活させるお話",
             "ogpimage": "eyecatch.jpg"
         }
     }
